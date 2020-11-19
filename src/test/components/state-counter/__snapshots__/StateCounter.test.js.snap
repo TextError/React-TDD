@@ -10,7 +10,7 @@ exports[`Check snapshot of the component should take a snapshot 1`] = `
       <button
         data-testid="button-decrement"
       >
-        -
+        down
       </button>
       <span
         data-testid="count"
@@ -20,7 +20,12 @@ exports[`Check snapshot of the component should take a snapshot 1`] = `
       <button
         data-testid="button-increment"
       >
-        +
+        up
+      </button>
+      <button
+        data-testid="button-up-await"
+      >
+        delay
       </button>
     </div>
   </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, render } from '@testing-library/react';
+import { cleanup, render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event'
 
 import Counter from '../../../components/state-counter/Counter';
@@ -29,3 +29,12 @@ describe('Check for state change', () => {
     expect(getByTestId('count')).toHaveTextContent('-1');
   });
 });
+
+describe('Testing asynchronous actions', () => {
+  it('Should increment the count after 1s', async () => {
+    const { getByTestId } = render(<Counter />);
+    userEvent.click(getByTestId('button-up-await'));
+    
+    await waitFor(() => expect(getByTestId('count')).toHaveTextContent('1'), { timeout: 1000 });
+  });
+})
