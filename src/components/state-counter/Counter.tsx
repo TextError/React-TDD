@@ -16,7 +16,7 @@ const Counter = () => {
         <button data-testid="button-increment" onClick={onIncrement}>+</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Counter;
