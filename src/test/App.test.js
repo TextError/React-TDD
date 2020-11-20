@@ -28,3 +28,11 @@ describe('Check for router change', () => {
     expect(getByTestId('count')).toHaveTextContent('0');
   });
 });
+
+describe('Check for bad route', () => {
+  it('should shows 404 page', () => {
+    const { getByTestId } = renderWithRouter(<App />, { route: '/some/bad/route'});
+
+    expect(getByTestId('not-found')).toBeInTheDocument();
+  });
+});

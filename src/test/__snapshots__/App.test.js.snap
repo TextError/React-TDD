@@ -2,30 +2,34 @@
 
 exports[`Check snapshot of the component should take a snapshot 1`] = `
 <DocumentFragment>
-  <nav
-    data-testid="navbar"
-  >
-    <a
-      data-testid="home-link"
-      href="/"
+  <div>
+    <nav
+      data-testid="navbar"
     >
-      Home
-    </a>
-    <a
-      data-testid="state-link"
-      href="/state"
+      <a
+        data-testid="home-link"
+        href="/"
+      >
+        Home
+      </a>
+      <a
+        data-testid="state-link"
+        href="/state"
+      >
+        State
+      </a>
+      <a
+        data-testid="redux-link"
+        href="/redux"
+      >
+        Redux
+      </a>
+    </nav>
+    <div
+      data-testid="home"
     >
-      State
-    </a>
-    <a
-      data-testid="redux-link"
-      href="/redux"
-    >
-      Redux
-    </a>
-  </nav>
-  <h1>
-    Home page
-  </h1>
+      Home page
+    </div>
+  </div>
 </DocumentFragment>
 `;
