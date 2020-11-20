@@ -1,8 +1,17 @@
-import { render, screen } from '@testing-library/react';
+import { } from '@testing-library/react';
 import App from '../App';
+import { renderWithRouter } from './utils/withRouter';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/app/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe('Check snapshot of the component', () => {
+  it('should take a snapshot', () => {
+    const { asFragment } = renderWithRouter(<App />) 
+  
+    expect(asFragment(<App />)).toMatchSnapshot();
+  })
+
+  it('should render the home page', () => {
+    const { container } = renderWithRouter(<App />);
+
+    expect(container.innerHTML).toMatch('Home page');
+  });
+})
