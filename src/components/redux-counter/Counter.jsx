@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Decrement, Increment } from '../../redux/actions/counter';
 
-const Counter = ({ counter }) => {
+const Counter = ({ counter, Increment, Decrement }) => {
 
-  const onIncrement = () => {};
-  const onDecrement = () => {};
+  const onIncrement = () => Increment();
+  const onDecrement = () => Decrement();
 
   return (
     <div>
@@ -22,4 +23,4 @@ const mapStateToProps = state => ({
   counter: state.counter.counter
 })
 
-export default connect(mapStateToProps, {})(Counter);
+export default connect(mapStateToProps, { Increment, Decrement })(Counter);
