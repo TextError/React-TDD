@@ -18,8 +18,8 @@ const App = () => {
       </nav>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/state" component={State} />
-        <Route path="/redux" component={Redux} />
+        <Route exact path="/state" component={State} />
+        <Route exact path="/redux" component={Redux} />
 
         <Route path='*' component={NotFound} />
       </Switch>

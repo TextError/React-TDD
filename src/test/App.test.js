@@ -1,6 +1,10 @@
-import { renderWithRouter } from './utils/withRouter';
+import { cleanup } from '@testing-library/react'
 import userEvent from '@testing-library/user-event';
+import { renderWithRouter } from './utils/withRouter';
+
 import App from '../App';
+
+afterEach(cleanup);
 
 describe('Check snapshot of the component', () => {
   it('should take a snapshot', () => {
