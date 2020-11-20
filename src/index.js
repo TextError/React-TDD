@@ -13,9 +13,9 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <PersistGate persistor={persistor}>
         <App />
-      </PersistGate>
+      {/* <PersistGate persistor={persistor}>
+      </PersistGate> */}
     </Provider >
   </React.StrictMode>,
   document.getElementById('root')

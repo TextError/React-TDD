@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check snapshot of the component should take a snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h2>
+      Counter
+    </h2>
+    <div>
+      <button
+        data-testid="button-decrement"
+      >
+        down
+      </button>
+      <span
+        data-testid="counter"
+      >
+        0
+      </span>
+      <button
+        data-testid="button-increment"
+      >
+        up
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
