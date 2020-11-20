@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link, Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
+import State from './components/state-counter/Counter';
+
 
 const Home = () => <h1>Home page</h1>
-const State = () => <h1>State page</h1>
 const Redux = () => <h1>Redux page</h1>
 const NotFound = () => <h1>404</h1>
 
